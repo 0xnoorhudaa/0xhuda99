@@ -1,0 +1,11 @@
+def generator(g, x, p):
+    return pow(g, x) % p
+
+# Parameter yang diketahui
+p = 131
+g = 6
+a = 15
+b = 17 
+
+v = generator(g, b, p)
+key = generator(v, a, p)
