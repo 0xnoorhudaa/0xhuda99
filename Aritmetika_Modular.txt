@@ -1,1 +1,11 @@
-<>
+def decrypt(cipher, key, p):
+    plaintext = ""
+    for c in cipher:
+        # Dekripsi dengan formula kebalikan dari enkripsi
+        plaintext += chr((c // key) % p)
+    return plaintext
+
+cipher = [33888, 276168, 261240, 302292]  # Contoh data cipher
+key = 89
+p = 97
+print(decrypt(cipher, key, p))  # Output: Teks asli
